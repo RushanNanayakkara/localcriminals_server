@@ -10,6 +10,7 @@ import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RequestMapping("/api/v1")
+@CrossOrigin(origins = "http://localhost:8080")
 @Controller
 public class Api {
 
@@ -49,8 +50,6 @@ public class Api {
     public Boolean delete(@PathVariable("id") int id){
         return criminalService.delete(id);
     }
-
-
 
 
 }
